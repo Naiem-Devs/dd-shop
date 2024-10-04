@@ -438,6 +438,10 @@ li {
 }
 .border-btn {border: 1px solid #fff;min-width: 300px;display: flex;align-items: center;justify-content: center;width: max-content;border-radius: 30px;font-size: 17px;padding: 7px;transition: all .3s;}
 
+.border-btn:hover img {
+    filter: brightness(0);
+}
+
 .border-btn:hover {
     background: #fff;
     color: #000;
