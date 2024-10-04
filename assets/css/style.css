@@ -155,9 +155,13 @@ li {
   padding: 6px 0;
   width: 100%;
   z-index: 99;
-  position: fixed;
+  position: sticky;
   top: 0;
-  background: #0f0f1170;
+  background: #0F0F11;
+}
+
+.header-area .container-fluid {
+    padding: 0 30px;
 }
 .menu-area nav ul li {
   list-style: none;
@@ -181,15 +185,22 @@ li {
 }
 .menu-area{
     text-align: right;
-    padding-right: 20px;
 }
 
 /* humbergar */
 .humbergar {
   cursor: pointer;
   display: block;
-  max-width: 35px;
+  max-width: 30px;
   margin-left: auto;
+}
+
+.bar__icon {
+    width: max-content;
+}
+
+.header__right {
+    text-align: right;
 }
 
 .humbergar span, 
@@ -197,8 +208,8 @@ li {
 .humbergar span:after {
   cursor: pointer;
   border-radius: 1px;
-  height: 3px;
-  width: 34px;
+  height: 2px;
+  width: 31px;
   background: white;
   position: relative;
   display: block;
@@ -206,10 +217,10 @@ li {
   transition: all 250ms ease-in-out;
 }
 .humbergar span:before {
-  top: -12px;
+  top: -10px;
 }
 .humbergar span:after {
-  bottom: -9px;
+  bottom: -8px;
 }
 
 .humbergar.active span {
@@ -221,7 +232,7 @@ li {
 }
 
 .humbergar.active span:after {
-  bottom: 3px;
+  bottom: 2px;
   transform: rotate(-45deg);
 }
  
@@ -232,11 +243,10 @@ li {
 .mobile-menu {
   position: fixed;
   width: 320px;
-  height: 100vh;
-  background: #ffffff;
+  height: calc(100vh - 90px););
+  background: #0f0f11;
   z-index: 99;
-  box-shadow: 0px 0px 9px -1px #737373;
-  top: 0;
+  top: 90px;
   left: 0;
   transition: .3s;
   margin-left: -400px;
@@ -257,7 +267,6 @@ li {
 }
 
 .mobile-menu nav ul li a {
-  color: #272835;
   font-size: 16px;
   line-height: 40px;
   transition: .3s;
@@ -281,7 +290,7 @@ li {
 
 /*============ Area Start =============*/
 
-.hero-area {height: calc(100vh);background-size: cover;background-position: center;}
+.hero-area {height: calc(100vh - 90px);background-size: cover;background-position: center;}
 
 .hero-area .container {
     height: 100%;
@@ -304,10 +313,8 @@ li {
 
 .hero__content h1 {
     text-align: left;
-    font-weight: 500;
-    max-width: 1000px;
     margin: auto;
-    font-size: 200px;
+    font-size: clamp(2.813rem, 9.688vw + 0.875rem, 12.5rem);
     line-height: .9;
     margin-bottom: 40px;
     font-family: 'Monument Extended';
@@ -315,7 +322,7 @@ li {
 
 .hero__content h1 span {
     display: block;
-    font-size: 136px;
+    font-size: clamp(2.25rem, 6.25vw + 1rem, 8.5rem);
     font-weight: 400;
     letter-spacing: 0px;
 }
@@ -348,8 +355,13 @@ li {
 .img__content {text-align: center;}
 .text__content {text-align: center;max-width: 600px;margin: auto;position: relative;}
 
+.text__content.v1 {
+    margin-top: -140px;
+}
+
 .text__content.v5 {
     max-width: 730px;
+    margin-top: -30px;
 }
 
 .text__content.v4 {
@@ -382,6 +394,7 @@ li {
 
 .text__content.v2 {
     max-width: 966px;
+    margin-top: -120px;
 }
 
 .text__content.v2 h1 {
@@ -399,6 +412,7 @@ li {
 .text__content.v1 h1 {
     font-size: 66px;
     font-family: 'Another-Danger-Demo';
+    rotate: -5deg;
 }
 
 .text__content h1 span {
@@ -548,7 +562,7 @@ li {
 }
 
 .sec__title h1 {
-    font-size: 49px;
+    font-size: clamp(1.5rem, 1.625vw + 1.175rem, 3.125rem);
     font-family: 'Monument Extended';
 }
 .detective__img {margin: 50px 0;}
@@ -623,6 +637,8 @@ li {
 .footer__btns {
     gap: 10px !important;!i;!;
     margin-top: 30px;
+    display: flex;
+    justify-content: center;
 }
 .footer__right {
 }
@@ -633,6 +649,7 @@ li {
     margin: 0;
     gap: 10px;
     justify-content: end;
+    text-align: right;
 }
 /*============ Area End =============*/
 
