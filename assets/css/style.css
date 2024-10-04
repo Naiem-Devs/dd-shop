@@ -1,0 +1,652 @@
+/*   Theme default css */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+
+/* ======font family=========
+font-family: "Playfair Display", serif;
+font-family: "Roboto", sans-serif;
+font-family: "Poppins", system-ui;
+
+font-family: 'Another-Danger-Demo';
+font-family: 'Monument Extended';
+font-family: 'Strengthen';
+font-family: 'Therace';
+font-family: 'MomsTypewriter';
+*/
+
+:root{
+
+  --thmColor: #FFB94A;
+  --textColor: fff;
+
+  --f18 : 18px;
+  --f20 : 20px;
+  --f22 : 22px;
+  --f24 : 24px;
+  --f28 : 28px;
+  --f30 : 30px;
+  --f32 : 32px;
+  --f36 : 36px;
+  --f40 : 40px;
+  --f48 : 48px;
+
+}
+
+
+body {
+  font-weight: 400;
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+  color: #fff;
+  background: #000;
+  font-family: "Roboto", sans-serif;
+}
+
+img{
+  max-width: 100%;
+}
+  
+button {
+  cursor: pointer; 
+  border: none;
+  padding: 0;
+  background: none;
+}
+
+a:focus,
+button:focus {
+  text-decoration: none;
+  outline: none; }
+
+a:focus,
+a:hover {
+  text-decoration: none; }
+
+a,
+button {
+  color: inherit;
+  outline: medium none; 
+  text-decoration: none;
+}
+
+button:focus, input:focus, input:focus, textarea, textarea:focus {
+  outline: 0; }
+
+ 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 0px;
+  /* font-weight: 700; */
+ }
+
+h1 a,
+h2 a,
+h3 a,
+h4 a,
+h5 a,
+h6 a {
+  color: inherit; }
+
+h1 {
+  font-size: 40px; }
+
+h2 {
+  font-size: 35px; }
+
+h3 {
+  font-size: 28px; }
+
+h4 {
+  font-size: 22px; }
+
+h5 {
+  font-size: 18px; }
+
+h6 {
+  font-size: 16px; }
+
+ul {
+  margin: 0px;
+  padding: 0px; }
+
+li {
+  list-style: none; }
+
+.pb_150{padding-bottom: 150px;}
+.pb_100{padding-bottom: 100px;}
+.pb_50{padding-bottom: 50px;}
+.pt_150{padding-top: 150px;}
+.pt_100{padding-top: 100px;}
+.pt_50{padding-top: 50px;}
+
+.mb_150{margin-bottom: 150px;}
+.mb_100{margin-bottom: 100px;}
+.mb_50{margin-bottom: 50px;}
+.mt_150{margin-top: 150px;}
+.mt_100{margin-top: 100px;}
+.mt_50{margin-top: 50px;}
+ 
+.thm_btn{
+    background: var(--thmColor);
+    color: #000;
+    padding: 10px 20px;
+    border-radius: 40px;
+    font-size: 17px;
+    display: inline-block;
+    transition: all .3s;
+}
+
+.thm_btn:hover {
+    background: #fff;
+    color: #000;
+}
+
+/* default-css END 
+================================== */
+ 
+
+
+.header-area {
+  padding: 6px 0;
+  width: 100%;
+  z-index: 99;
+  position: fixed;
+  top: 0;
+  background: #0f0f1170;
+}
+.menu-area nav ul li {
+  list-style: none;
+  display: inline-block;
+}
+
+.menu-area nav ul li a {
+  font-size: 15px;
+  display: inline-block;
+  margin-left: 40px;
+  position: relative;
+}
+
+.menu-area nav ul li:first-child a {
+    margin: 0;
+}
+
+.menu-area nav ul li a.active {
+    font-weight: 700;
+    color: var(--thmColor);
+}
+.menu-area{
+    text-align: right;
+    padding-right: 20px;
+}
+
+/* humbergar */
+.humbergar {
+  cursor: pointer;
+  display: block;
+  max-width: 35px;
+  margin-left: auto;
+}
+
+.humbergar span, 
+.humbergar span:before, 
+.humbergar span:after {
+  cursor: pointer;
+  border-radius: 1px;
+  height: 3px;
+  width: 34px;
+  background: white;
+  position: relative;
+  display: block;
+  content: '';
+  transition: all 250ms ease-in-out;
+}
+.humbergar span:before {
+  top: -12px;
+}
+.humbergar span:after {
+  bottom: -9px;
+}
+
+.humbergar.active span {
+  background-color: transparent;
+}
+.humbergar.active span:before {
+  top:0px;
+  transform: rotate(45deg);
+}
+
+.humbergar.active span:after {
+  bottom: 3px;
+  transform: rotate(-45deg);
+}
+ 
+/* humbarger END */
+ 
+
+/* mobile-menu START */
+.mobile-menu {
+  position: fixed;
+  width: 320px;
+  height: 100vh;
+  background: #ffffff;
+  z-index: 99;
+  box-shadow: 0px 0px 9px -1px #737373;
+  top: 0;
+  left: 0;
+  transition: .3s;
+  margin-left: -400px;
+  padding-left: 40px;
+  padding-top: 100px;
+}
+.siteBar{
+  margin-left: 0; 
+}
+.mobile-menu ul#pills-tab {
+  margin-top: 90px;
+  margin-bottom: 35px !important;
+  display: block;
+}
+.mobile-menu  nav ul li {
+  list-style: none;
+  display: block;
+}
+
+.mobile-menu nav ul li a {
+  color: #272835;
+  font-size: 16px;
+  line-height: 40px;
+  transition: .3s;
+}
+
+.mobile-menu a.bars {
+  position: absolute;
+  right: 20px;
+  top: 15px;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 50%;
+  font-size: 32px;
+  color: rgb(255, 0, 43);
+}
+
+/* Header section END */
+
+
+/*============ Area Start =============*/
+
+.hero-area {height: calc(100vh);background-size: cover;background-position: center;}
+
+.hero-area .container {
+    height: 100%;
+}
+
+.hero-area .container {}
+.container {
+}
+.hero__content {text-align: center;width: 100%;position: relative;margin-top: 190px;}
+
+.hero__content a {
+    min-width: 300px;
+}
+
+.hero__content p {
+    font-size: 30px;
+    font-family: "Poppins", system-ui;
+    margin-bottom: 30px;
+}
+
+.hero__content h1 {
+    text-align: left;
+    font-weight: 500;
+    max-width: 1000px;
+    margin: auto;
+    font-size: 200px;
+    line-height: .9;
+    margin-bottom: 40px;
+    font-family: 'Monument Extended';
+}
+
+.hero__content h1 span {
+    display: block;
+    font-size: 136px;
+    font-weight: 400;
+    letter-spacing: 0px;
+}
+.thm_btn {
+}
+/*============ Area End =============*/
+
+
+/*============ Area Start =============*/
+.brand-area {display: flex;align-items: center;justify-content: center;gap: 40px;padding: 40px 0;}
+
+.brand-area p {
+    margin: 0;
+    color: #656565;
+}
+
+.brand-area ul {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+/*============ Area End =============*/
+
+
+/*============ Area Start =============*/
+
+.product-area {background-size: cover;background-position: center;padding: 50px 0 100px;}
+.product__content {
+}
+.img__content {text-align: center;}
+.text__content {text-align: center;max-width: 600px;margin: auto;position: relative;}
+
+.text__content.v5 {
+    max-width: 730px;
+}
+
+.text__content.v4 {
+    max-width: 700px;
+}
+
+.text__content.v3 {
+    max-width: 740px;
+}
+
+.text__content.v5 h1 {
+    font-size: 53px;
+    font-family: 'MomsTypewriter';
+}
+
+.text__content.v4 h1 {
+    font-size: 100px;
+    font-family: 'Therace';
+    line-height: .8;
+}
+
+.text__content.v4 h1 span {
+    font-size: 72px;
+}
+
+.text__content.v3 h1 {
+    font-family: "Playfair Display", serif;
+    font-size: 62px;
+}
+
+.text__content.v2 {
+    max-width: 966px;
+}
+
+.text__content.v2 h1 {
+    font-family: 'Strengthen';
+    font-size: 89px;
+    line-height: 1;
+}
+
+.text__content h1 {
+    margin-bottom: 60px;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+.text__content.v1 h1 {
+    font-size: 66px;
+    font-family: 'Another-Danger-Demo';
+}
+
+.text__content h1 span {
+    display: block;
+    font-size: 40px;
+}
+
+.text__content p {
+    margin: 0;
+    position: absolute;
+    color: #000;
+    padding: 0 3px;
+    mix-blend-mode: lighten;
+    font-size: 23px;
+}
+
+.text__content p span {
+    background: #fff;
+    display: block;
+    line-height: .9;
+    margin: 5px 0;
+    padding: 3px;
+    width: max-content;
+    margin-inline: auto;
+}
+
+
+.top__left {top: 0;left: 0;rotate: 7deg;}
+.btm__left {bottom: 0;left: 0;rotate: -12deg;}
+.top__right {top: 0;right: 0;rotate: -3deg;}
+.btm__right {bottom: 0;right: 0;rotate: 10deg;}
+.product__button {
+}
+
+.product__button a {
+    margin: auto;
+}
+.border-btn {border: 1px solid #fff;min-width: 300px;display: flex;align-items: center;justify-content: center;width: max-content;border-radius: 30px;font-size: 17px;padding: 7px;transition: all .3s;}
+
+.border-btn:hover {
+    background: #fff;
+    color: #000;
+}
+
+
+.v1 .top__left{
+    font-size: 33px;
+    top: 82px;
+}
+.v1 .btm__left{
+    font-size: 26px;
+    left: -25px;
+    bottom: -16px;
+}
+.v1 .top__right{
+    font-size: 27px;
+    top: 113px;
+}
+.v1 .btm__right{
+    font-size: 33px;
+    bottom: -31px;
+}
+
+.v2 .top__left{
+    font-size: 23px;
+    top: -30px;
+    rotate: 15deg;
+}
+.v2 .btm__left{
+    font-size: 23px;
+    rotate: 10deg;
+    bottom: -39px;
+}
+.v2 .top__right{
+    font-size: 27px;
+    rotate: -15deg;
+    top: 15px;
+}
+.v2 .btm__right{}
+
+.v3 .top__left{top: 30px;}
+.v3 .btm__left{}
+.v3 .top__right{
+    top: 15px;
+    right: -26px;
+}
+.v3 .btm__right{
+    bottom: -34px;
+}
+
+.v4 .top__left{
+    top: 20px;
+}
+.v4 .btm__left{
+    bottom: -40px;
+}
+.v4 .top__right{
+    top: 30px;
+}
+.v4 .btm__right{
+    bottom: -50px;
+}
+
+.v5 .top__left{
+    top: -23px;
+    left: 30px;
+}
+.v5 .btm__left{
+    left: 73px;
+    bottom: -24px;
+}
+.v5 .top__right{
+    rotate: -10deg;
+    top: -20px;
+}
+.v5 .btm__right{
+    right: 45px;
+    bottom: -31px;
+}
+
+
+.v2 {
+}
+.v3 {
+}
+.v4 {
+}
+.v5 {
+}
+/*============ Area End =============*/
+
+
+/*============ Area Start =============*/
+
+.detective-area {text-align: center;padding: 50px 0;background: #3E2850;}
+.sec__title {
+}
+
+.sec__title p {
+    font-size: 18px;
+    font-family: 'Poppins';
+    font-weight: 300;
+}
+
+.sec__title h1 {
+    font-size: 49px;
+    font-family: 'Monument Extended';
+}
+.detective__img {margin: 50px 0;}
+
+.detective__img ul {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+}
+.detective__btns {display: flex;align-items: center;justify-content: center;gap: 20px;}
+
+.detective__btns a {
+    position: relative;
+    gap: 7px;
+}
+
+.detective__btns a i {
+    position: absolute;
+    left: 20px;
+}
+/*============ Area End =============*/
+
+
+/*============ Area Start =============*/
+
+.resolve-area {text-align: center;padding: 100px 0;background-size: cover;background-position: center;}
+.resolve___blk {margin-top: 80px;display: flex;flex-direction: column;gap: 40px;}
+
+.resolve___blk p {
+    font-family: 'Poppins';
+    max-width: 320px;
+    margin: auto;
+}
+
+.resolve___blk i {
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.resolve___blk h4 {
+    margin: 0;
+    font-family: 'MomsTypewriter';
+    font-size: 23px;
+    font-weight: normal;
+}
+/*============ Area End =============*/
+
+
+/*============ Area Start =============*/
+
+.footer-area {padding: 30px 0;font-family: 'Poppins';font-size: 14px;}
+
+.footer-area .container-fluid {
+    padding: 0 40px;
+}
+.footer__left {
+}
+.footer__nav {
+}
+
+.footer__nav a {
+}
+
+.footer__nav ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+.footer__btns {
+    gap: 10px !important;!i;!;
+    margin-top: 30px;
+}
+.footer__right {
+}
+
+.footer__right p {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    gap: 10px;
+    justify-content: end;
+}
+/*============ Area End =============*/
+
+
+/*============ Area Start =============*/
+
+/*============ Area End =============*/
+
+
+/*============ Area Start =============*/
+
+/*============ Area End =============*/
+
+/* 
+Monument Extended - ultrabold
+Another Danger - Demo regular no
+Nitti Typewriter - cameo paid
+Strengthen -  regular
+Therace - regular
+Mom´sTypewriter - regular 
+*/
